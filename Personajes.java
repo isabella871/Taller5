@@ -10,6 +10,7 @@ class Personajes {
         this.nombre = nombre;
         this.habilidad = habilidad;
         this.fuerza = fuerza;
+        this.especie = especie;
         this.ecosistema = ecosistema;
         this.secreto = secreto;
     }
@@ -30,7 +31,7 @@ class Personajes {
         return habilidad;
     }
 
-    public void setVilla(Integer fuerza){
+    public void setFuerza(Integer fuerza){
         this.fuerza = fuerza;
     }
 
@@ -74,8 +75,8 @@ class Personajes {
         System.out.println();
     }
 
-    public void ataque(){
-        if (this.fuerza <= 10){
+    public void ataque(Integer vidaVictima){
+        if (this.fuerza < vidaVictima){
             System.out.println("El ataque no causó daños");
         }
     }
