@@ -69,7 +69,7 @@ class Personajes {
         System.out.println("Fuerza: " + fuerza);
         System.out.println("Especie: " + especie);
         System.out.println("Ecosistema: " + ecosistema);
-        System.out.println("El secreto de " + nombre + " es .............." + getSecreto());
+        System.out.println("El secreto de " + nombre + " es .............. " + getSecreto());
         System.out.println("--------------------------------------------");
         System.out.println();
     }

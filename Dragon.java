@@ -1,17 +1,6 @@
-public class Centauro extends Personajes {
-    private String debilidad;
-
-    public Centauro(String nombre, String habilidad, Integer fuerza, String especie, String ecosistema, String secreto, String debilidad){
+public class Dragon extends Personajes {
+    public Dragon (String nombre, String habilidad, Integer fuerza, String especie, String ecosistema, String secreto){
         super (nombre, habilidad, fuerza, especie, ecosistema, secreto);
-        this.debilidad = debilidad;
-    }
-
-    public void debilidad(String debilidad){
-        this.debilidad = debilidad;
-    }
-
-    public String getDebilidad(){
-        return debilidad;
     }
 
     @Override
@@ -22,7 +11,6 @@ public class Centauro extends Personajes {
         System.out.println("Fuerza: " + getFuerza());
         System.out.println("Especie: " + getEspecie());
         System.out.println("Ecosistema" + getEcosistema());
-        System.out.println("Debilidad: " + debilidad);
         System.out.println("El secreto de " + getNombre() + " es ..............");
         System.out.println("--------------------------------------------");
         System.out.println();
@@ -35,5 +23,4 @@ public class Centauro extends Personajes {
             System.out.println("Ataque recibido, precaución");
         }
     }
-
 }
