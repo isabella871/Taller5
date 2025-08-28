@@ -2,21 +2,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /*
-        Personajes p1 = new Personajes("Cifru", "Volar", 50, "Mamifera", "Aereo", "Asesinato");
-        p1.infoPersonaje();
-        p1.ataque(); 
-        */
 
         Scanner scanner = new Scanner(System.in);
         Integer opcion;
         do{
             System.out.println("---------- Elija Un Personaje ----------");
-            System.out.println(" 1. Centauro");
-            System.out.println(" 2. Dragon");
-            System.out.println(" 3. Hechicero");
-            System.out.println(" 4. Vampiro");
-            System.out.println(" 5. ... Salir .....");
+            System.out.println(" 2. Crear personaje");
+            System.out.println(" 2. Vampiro");
+            System.out.println(" 3. Dragon");
+            System.out.println(" 4. Hechicero");
+            System.out.println(" 5. Vampiro");
+            System.out.println(" 6. ... Salir .....");
             System.out.println("----------------------------------------");
             opcion = scanner.nextInt();
             scanner.nextLine();
@@ -25,13 +21,43 @@ public class Main {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Ingrese el nombre del vampiro");
+                    System.out.println("------------- C R E A R   P E R S O N A J E -------------");
+                    System.out.print("Nombre del personaje: ");
                     String nombre = scanner.nextLine();
-                    personajes = new Vampiro(nombre, "Morder", 74, "No-muerto", "Bosque", "Secreto oscuro");
+                    System.out.print("Habilidad: ");
+                    String habilidad = scanner.nextLine();
+                    System.out.print("Fuerza: ");
+                    Integer fuerza = scanner.nextInt();
+                    System.out.print("Especie: ");
+                    String especie = scanner.nextLine();
+                    System.out.print("Ecosistema: ");
+                    String ecosistema = scanner.nextLine();
+
+                    personajes = new Personajes(nombre, habilidad, fuerza, especie, ecosistema, null);
+                    personajes.infoPersonaje();
+                    personajes.ataque(fuerza);
+                    break;
+
+                case 2:
+                    System.out.println("------------- D A T O S -------------");
+                    System.out.print("Nombre del vampiro: ");
+                    String nombre = scanner.nextLine();
+                    System.out.print("Habilidad: ");
+                    String habilidad = scanner.nextLine();
+                    System.out.print("Fuerza: ");
+                    Integer fuerza = scanner.nextInt();
+                    System.out.print("Especie: ");
+                    String especie = scanner.nextLine();
+                    System.out.print("Ecosistema: ");
+                    String ecosistema = scanner.nextLine();
+
+                    personajes = new Vampiro(nombre, habilidad, fuerza , especie, ecosistema, null);
+
                     personajes.infoPersonaje();
                     personajes.ataque(opcion);
                     ((Vampiro) personajes).secreto(); // Llamar un método que no existe en la clase padre
                     break;
+                
             
                 default:
                     System.out.println(".... Saliendo ....");

@@ -12,7 +12,7 @@ public class Vampiro extends Personajes {
         System.out.println("Habilidad: " + getHabilidad());
         System.out.println("Fuerza: " + getFuerza());
         System.out.println("Especie: " + getEspecie());
-        System.out.println("Ecosistema" + getEcosistema());
+        System.out.println("Ecosistema: " + getEcosistema());
         System.out.println("El secreto de " + getNombre() + " es ..............");
         System.out.println("-------------------------------------------------");
         System.out.println();
@@ -22,10 +22,12 @@ public class Vampiro extends Personajes {
     public void ataque(Integer vidaVictima){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ingrese el nombre de la victima");
+        System.out.println("... Ataque ...");
+
+        System.out.print("Ingrese el nombre de la victima: ");
         String nombreVic = scanner.nextLine();
 
-        System.out.println("Ingrese cantidad del ataque");
+        System.out.print("Ingrese cantidad del ataque: ");
         Integer ataque = scanner.nextInt();
 
         vidaVictima = 100;
@@ -33,12 +35,12 @@ public class Vampiro extends Personajes {
         if (ataque < vidaVictima){
             vidaVictima -= ataque ;
             System.out.println("vida de la víctima: " + vidaVictima + " ataque fallido");
-            System.out.println("¿Seguir el ataque? 1.  Sí / 2. no");
+            System.out.print("¿Seguir el ataque? 1.  Sí / 2. no ");
             Integer decicidir = scanner.nextInt();
             scanner.nextLine();
 
             if (decicidir == 1){
-                System.out.println("Ingrese la fuerza del ataque");
+                System.out.print("Ingrese la fuerza del ataque: ");
                 Integer fuerza = scanner.nextInt();
                 vidaVictima -= fuerza;
                 System.out.println(nombreVic +" ha muerto");
