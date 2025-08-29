@@ -34,7 +34,7 @@ public class Vampiro extends Personajes {
 
         if (ataque < vidaVictima){
             vidaVictima -= ataque ;
-            System.out.println("vida de la víctima: " + vidaVictima + " ataque fallido");
+            System.out.println("vida de la víctima: " + vidaVictima + " (sobrevive)");
             System.out.print("¿Seguir el ataque? 1.  Sí / 2. no ");
             Integer decicidir = scanner.nextInt();
             scanner.nextLine();
@@ -53,6 +53,7 @@ public class Vampiro extends Personajes {
     }
 
     public void secreto(){
-        System.out.println("El secreto de " + getNombre() + " es ");
+        System.out.println("El secreto de " + getNombre() + " es ... ");
+        ataque(getFuerza());
     }
 }

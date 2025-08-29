@@ -7,7 +7,7 @@ public class Main {
         Integer opcion;
         do{
             System.out.println("---------- Elija Un Personaje ----------");
-            System.out.println(" 2. Crear personaje");
+            System.out.println(" 1. Crear personaje");
             System.out.println(" 2. Vampiro");
             System.out.println(" 3. Dragon");
             System.out.println(" 4. Hechicero");
@@ -28,6 +28,7 @@ public class Main {
                     String habilidad = scanner.nextLine();
                     System.out.print("Fuerza: ");
                     Integer fuerza = scanner.nextInt();
+                    scanner.nextLine();
                     System.out.print("Especie: ");
                     String especie = scanner.nextLine();
                     System.out.print("Ecosistema: ");
@@ -41,17 +42,18 @@ public class Main {
                 case 2:
                     System.out.println("------------- D A T O S -------------");
                     System.out.print("Nombre del vampiro: ");
-                    String nombre = scanner.nextLine();
+                    String nombreV = scanner.nextLine();
                     System.out.print("Habilidad: ");
-                    String habilidad = scanner.nextLine();
+                    String habilidadV = scanner.nextLine();
                     System.out.print("Fuerza: ");
-                    Integer fuerza = scanner.nextInt();
+                    Integer fuerzaV = scanner.nextInt();
+                    scanner.nextLine();
                     System.out.print("Especie: ");
-                    String especie = scanner.nextLine();
+                    String especieV = scanner.nextLine();
                     System.out.print("Ecosistema: ");
-                    String ecosistema = scanner.nextLine();
+                    String ecosistemaV = scanner.nextLine();
 
-                    personajes = new Vampiro(nombre, habilidad, fuerza , especie, ecosistema, null);
+                    personajes = new Vampiro(nombreV, habilidadV, fuerzaV, especieV, ecosistemaV, null);
 
                     personajes.infoPersonaje();
                     personajes.ataque(opcion);
@@ -62,7 +64,7 @@ public class Main {
                 default:
                     System.out.println(".... Saliendo ....");
             }
-        }while (opcion != 5);
+        }while (opcion != 6);
         scanner.close();
     }
 }
